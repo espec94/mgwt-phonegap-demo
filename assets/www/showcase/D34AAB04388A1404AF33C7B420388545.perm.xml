@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><permutation name="D34AAB04388A1404AF33C7B420388545">
+<variables>
+<mgwt.os>retina</mgwt.os>
+<user.agent>safari</user.agent>
+<mobile.user.agent>not_mobile</mobile.user.agent>
+</variables>
+<files>
+<file>index.html</file>
+<file>showcase/D34AAB04388A1404AF33C7B420388545.cache.js</file>
+<file>logo.png</file>
+<file>./</file>
+<file>showcase/compilation-mappings.txt</file>
+<file>showcase/showcase.nocache.js</file>
+<file>showcase/showcase.devmode.js</file>
+<file>showcase/clear.cache.gif</file>
+</files>
+</permutation>

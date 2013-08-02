@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# Unique id #1375471487255.0.12826414521427099
+
+CACHE:
+# Static app files
+index.html
+logo.png
+./
+
+# GWT compiled files
+showcase/84115DAD15C069735118FD2A037E6963.cache.js
+showcase/compilation-mappings.txt
+showcase/showcase.nocache.js
+showcase/showcase.devmode.js
+showcase/clear.cache.gif
+
+
+# All other resources require the client to be online.
+NETWORK:
+*

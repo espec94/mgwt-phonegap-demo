@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><permutation name="E53248230038DBA43DCFC6B413320E1B">
+<variables>
+<mgwt.os>android</mgwt.os>
+<user.agent>safari</user.agent>
+<mobile.user.agent>not_mobile</mobile.user.agent>
+</variables>
+<files>
+<file>index.html</file>
+<file>showcase/E53248230038DBA43DCFC6B413320E1B.cache.js</file>
+<file>logo.png</file>
+<file>./</file>
+<file>showcase/compilation-mappings.txt</file>
+<file>showcase/showcase.nocache.js</file>
+<file>showcase/showcase.devmode.js</file>
+<file>showcase/clear.cache.gif</file>
+</files>
+</permutation>

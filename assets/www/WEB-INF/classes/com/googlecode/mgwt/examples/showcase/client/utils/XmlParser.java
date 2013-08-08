@@ -1,5 +1,6 @@
 package com.googlecode.mgwt.examples.showcase.client.utils;
 
+import com.google.gwt.user.client.Window;
 import com.google.gwt.xml.client.*;
 import com.googlecode.mgwt.examples.showcase.client.model.Station;
 import com.googlecode.mgwt.examples.showcase.client.model.StationData;
@@ -38,6 +39,7 @@ public class XmlParser {
 
     public static void parseStationDataXml(String messageXml, List stationDataList) {
         try {
+            Window.alert("parseStationDataXml");
             // parse the XML document into a DOM
             Document messageDom = XMLParser.parse(messageXml);
 
@@ -47,22 +49,34 @@ public class XmlParser {
             //initialize Station object
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Element entry = (Element)nodeList.item(i);
+                String servertime = getElementAsString(entry,"Servertime");
                 String trainCode = getElementAsString(entry,"Traincode");
                 String stationFullName = getElementAsString(entry,"Stationfullname");
                 String stationCode = getElementAsString(entry,"Stationcode");
                 String queryTime = getElementAsString(entry,"Querytime");
+                String traindate = getElementAsString(entry,"Traindate");
+                String origin = getElementAsString(entry,"Origin");
                 String destination = getElementAsString(entry,"Destination");
-                String direction = getElementAsString(entry,"Direction");
-                String trainType = getElementAsString(entry,"Traintype");
-                int dueIn = Integer.parseInt(getElementAsString(entry,"Duein"));
-                String expectedArrival = getElementAsString(entry,"Exparrival");
-                String scheduledArrival = getElementAsString(entry,"Scharrival");
+                String origintime = getElementAsString(entry,"Origintime");
+                String destinationtime = getElementAsString(entry,"Destinationtime");
+                String status = getElementAsString(entry,"Status");
                 String lastLocation = getElementAsString(entry,"Lastlocation");
+                int dueIn = Integer.parseInt(getElementAsString(entry, "Duein"));
+                String late = getElementAsString(entry, "Late");
+                String expectedArrival = getElementAsString(entry, "Exparrival");
+                String expdepart = getElementAsString(entry, "Expdepart");
+                String scheduledArrival = getElementAsString(entry, "Scharrival");
+                String schdepart = getElementAsString(entry, "Schdepart");
+                String direction = getElementAsString(entry, "Direction");
+                String trainType = getElementAsString(entry,"Traintype");
+                String locationtype = getElementAsString(entry,"Locationtype");
 
+                stationDataList.add(new StationData(trainCode, stationFullName, stationCode, queryTime, destination, direction, trainType, dueIn, expectedArrival, scheduledArrival, lastLocation));
                 stationDataList.add(new StationData(trainCode, stationFullName, stationCode, queryTime, destination, direction, trainType, dueIn, expectedArrival, scheduledArrival, lastLocation));
             }
 
         } catch (DOMException e) {
+            e.getMessage();
         }
 
     }
@@ -80,9 +94,9 @@ public class XmlParser {
 
     public static void parseTrainPositionsXml(String responseText, Map<String, TrainPosition> listTrainPosition) {
         try {
+            Window.alert("parseTrainPositionsXml");
             // parse the XML document into a DOM
             Document messageDom = XMLParser.parse(responseText);
-
             // find each station in an attribute of the <objStation> tag
             NodeList nodeList = messageDom.getDocumentElement().getElementsByTagName("objTrainPositions");
 
@@ -90,9 +104,12 @@ public class XmlParser {
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Element entry = (Element)nodeList.item(i);
                 String trainStatus = getElementAsString(entry,"TrainStatus");
-                double trainLatitude = Double.parseDouble(getElementAsString(entry,"TrainLatitude"));
-                double trainLongitude = Double.parseDouble(getElementAsString(entry,"TrainLongitude"));
-                String trainCode = getElementAsString(entry,"TrainCode");
+                double trainLatitude = Double.parseDouble(getElementAsString(entry, "TrainLatitude"));
+                double trainLongitude = Double.parseDouble(getElementAsString(entry, "TrainLongitude"));
+                String trainCode = getElementAsString(entry, "TrainCode");
+                String trainDate = getElementAsString(entry, "TrainDate");
+                String publicMessage = getElementAsString(entry, "PublicMessage");
+                String direction = getElementAsString(entry,"Direction");
 
                 listTrainPosition.put(trainCode, new TrainPosition(trainStatus, trainLatitude, trainLongitude, trainCode));
             }

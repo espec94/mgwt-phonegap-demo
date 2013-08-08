@@ -38,7 +38,7 @@ public class StationDetailsActivity extends MGWTAbstractActivity {
         view.setTitle(stationDesc);
         String requestURL = ApplicationConstants.BASE_URL + "/" + ApplicationConstants.GET_STATION_DATA_BY_NAME + "?" + ApplicationConstants.STATION_DESC + "=" + stationDesc;
 
-        System.out.println("Sending HTTP request:" + requestURL + " to get train details from current station.");
+        System.out.println("Sending HTTP request:" + requestURL + " to get train details from" + stationDesc +" station.");
         RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, requestURL);
 
         try {

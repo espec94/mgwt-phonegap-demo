@@ -1,9 +1,8 @@
 package com.googlecode.mgwt.examples.showcase.client.activities;
 
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.XMLParser;
 import com.googlecode.mgwt.dom.client.event.tap.TapEvent;
 import com.googlecode.mgwt.dom.client.event.tap.TapHandler;
 import com.googlecode.mgwt.examples.showcase.client.ClientFactory;
@@ -47,8 +46,15 @@ public class StationSummaryActivity extends MGWTAbstractActivity {
                     @Override
                     public void onCellSelected(CellSelectedEvent event) {
 //                        int index = event.getIndex();
-                        Document messageDom = XMLParser.parse(event.getTargetElement().toString());
-                        String stationName = messageDom.getElementsByTagName("div").item(0).getFirstChild().getNodeValue();
+                        Window.alert(event.getTargetElement().toString());
+
+//                        Document messageDom = XMLParser.parse(event.getTargetElement().toString());
+//                        String stationName = messageDom.getDocumentElement().getElementsByTagName("div").item(0).getFirstChild().getNodeValue();
+//                        System.out.println("Cell Selected Event:" + event.getTargetElement().toString());
+                        String targetElement = event.getTargetElement().toString();
+                        int index = targetElement.indexOf(">");
+                        int endIndex = targetElement.lastIndexOf("<");
+                        String stationName = targetElement.substring(index + 1, endIndex).trim();
                         StationSelectedEvent.fire(eventBus, stationName);
                     }
                 }));

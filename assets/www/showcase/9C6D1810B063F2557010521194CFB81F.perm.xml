@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><permutation name="9C6D1810B063F2557010521194CFB81F">
+<variables>
+<mobile.user.agent>mobilesafari</mobile.user.agent>
+<mgwt.os>ipad</mgwt.os>
+<user.agent>safari</user.agent>
+</variables>
+<files>
+<file>showcase/9C6D1810B063F2557010521194CFB81F.cache.js</file>
+<file>index.html</file>
+<file>logo.png</file>
+<file>./</file>
+<file>showcase/compilation-mappings.txt</file>
+<file>showcase/showcase.nocache.js</file>
+<file>showcase/showcase.devmode.js</file>
+<file>showcase/clear.cache.gif</file>
+</files>
+</permutation>

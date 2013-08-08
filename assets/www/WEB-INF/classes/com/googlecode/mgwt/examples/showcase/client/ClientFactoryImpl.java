@@ -26,7 +26,6 @@ public class ClientFactoryImpl implements ClientFactory {
     private EventBus eventBus;
     private PlaceController placeController;
     private ShowCaseListView homeViewImpl;
-    private UIView uiView;
     private AboutView aboutView;
     private StationUtil stationUtil;
     private StationSummaryView stationSummaryView;
@@ -56,14 +55,6 @@ public class ClientFactoryImpl implements ClientFactory {
     @Override
     public PlaceController getPlaceController() {
         return placeController;
-    }
-
-    @Override
-    public UIView getUIView() {
-        if (uiView == null) {
-            uiView = new UIViewImpl();
-        }
-        return uiView;
     }
 
     @Override

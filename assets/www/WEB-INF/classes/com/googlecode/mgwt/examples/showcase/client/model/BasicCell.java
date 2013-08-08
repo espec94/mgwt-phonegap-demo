@@ -23,10 +23,6 @@ import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.googlecode.mgwt.ui.client.widget.celllist.Cell;
 
 
-/**
- * @author Daniel Kurka
- *
- */
 public abstract class BasicCell<T> implements Cell<T> {
 
 	private static Template TEMPLATE = GWT.create(Template.class);

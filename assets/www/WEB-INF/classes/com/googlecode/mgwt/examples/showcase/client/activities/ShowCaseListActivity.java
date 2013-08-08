@@ -6,11 +6,10 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.googlecode.mgwt.dom.client.event.tap.TapEvent;
 import com.googlecode.mgwt.dom.client.event.tap.TapHandler;
 import com.googlecode.mgwt.examples.showcase.client.ClientFactory;
-import com.googlecode.mgwt.examples.showcase.client.activities.home.Topic;
+import com.googlecode.mgwt.examples.showcase.client.model.Topic;
 import com.googlecode.mgwt.examples.showcase.client.common.ApplicationConstants;
 import com.googlecode.mgwt.examples.showcase.client.places.AboutPlace;
 import com.googlecode.mgwt.examples.showcase.client.places.StationSummaryPlace;
-import com.googlecode.mgwt.examples.showcase.client.places.UIPlace;
 import com.googlecode.mgwt.examples.showcase.client.views.ShowCaseListView;
 import com.googlecode.mgwt.mvp.client.MGWTAbstractActivity;
 import com.googlecode.mgwt.ui.client.widget.celllist.CellSelectedEvent;
@@ -46,12 +45,7 @@ public class ShowCaseListActivity extends MGWTAbstractActivity {
                     public void onCellSelected(CellSelectedEvent event) {
                         int index = event.getIndex();
 
-                        if (index == 1) {
-                            clientFactory.getPlaceController().goTo(new UIPlace());
-
-                            return;
-                        }
-                        if (index == 0) {
+                         if (index == 0) {
                             clientFactory.getPlaceController().goTo(new StationSummaryPlace());
                         }
 
@@ -104,8 +98,6 @@ public class ShowCaseListActivity extends MGWTAbstractActivity {
     private List<Topic> createTopicsList() {
         ArrayList<Topic> list = new ArrayList<Topic>();
         list.add(new Topic("Stations", 0));
-        list.add(new Topic("UI", 5));
-
         return list;
     }
 

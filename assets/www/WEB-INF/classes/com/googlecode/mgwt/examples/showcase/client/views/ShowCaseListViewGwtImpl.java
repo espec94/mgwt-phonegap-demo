@@ -18,7 +18,7 @@ package com.googlecode.mgwt.examples.showcase.client.views;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Widget;
 import com.googlecode.mgwt.dom.client.event.tap.HasTapHandlers;
-import com.googlecode.mgwt.examples.showcase.client.activities.home.Topic;
+import com.googlecode.mgwt.examples.showcase.client.model.Topic;
 import com.googlecode.mgwt.examples.showcase.client.model.BasicCell;
 import com.googlecode.mgwt.ui.client.widget.HeaderButton;
 import com.googlecode.mgwt.ui.client.widget.HeaderPanel;

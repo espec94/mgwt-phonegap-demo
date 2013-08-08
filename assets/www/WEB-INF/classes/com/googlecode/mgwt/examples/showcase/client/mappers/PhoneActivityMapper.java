@@ -36,10 +36,6 @@ public class PhoneActivityMapper implements ActivityMapper {
             return new ShowCaseListActivity(clientFactory);
         }
 
-        if (place instanceof UIPlace) {
-            return new UIActivity(clientFactory);
-        }
-
         if (place instanceof AboutPlace) {
             return new AboutActivity(clientFactory);
         }

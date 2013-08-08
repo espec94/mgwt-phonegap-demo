@@ -31,7 +31,6 @@ public interface ClientFactory {
     /**
      * @return
      */
-    public UIView getUIView();
 
     public AboutView getAboutView();
 

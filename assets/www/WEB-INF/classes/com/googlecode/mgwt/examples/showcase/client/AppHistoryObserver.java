@@ -79,7 +79,7 @@ public class AppHistoryObserver implements HistoryObserver {
     }
 
     private void onPhoneNav(Place place, HistoryHandler historyHandler) {
-        if (place instanceof AboutPlace || place instanceof UIPlace || place instanceof StationSummaryPlace) {
+        if (place instanceof AboutPlace || place instanceof StationSummaryPlace) {
             historyHandler.replaceCurrentPlace(new HomePlace());
         } else {
             if(place instanceof StationDetailsPlace){

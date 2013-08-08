@@ -11,7 +11,7 @@ public class StationUtil {
 
     private static Map<String, Station> mapOfStations = new TreeMap<String, Station>();
 
-    private static String allStationsXml;
+     private static String allStationsXml;
 
     private String currentStation;
 
@@ -41,5 +41,9 @@ public class StationUtil {
 
     public String getCurrentStation(){
         return currentStation;
+    }
+
+    public static Map<String, Station> getMapOfStations() {
+        return mapOfStations;
     }
 }

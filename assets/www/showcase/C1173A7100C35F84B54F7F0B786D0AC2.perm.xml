@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><permutation name="C1173A7100C35F84B54F7F0B786D0AC2">
+<variables>
+<user.agent>gecko1_8</user.agent>
+<mgwt.os>desktop</mgwt.os>
+<mobile.user.agent>not_mobile</mobile.user.agent>
+</variables>
+<files>
+<file>index.html</file>
+<file>logo.png</file>
+<file>showcase/C1173A7100C35F84B54F7F0B786D0AC2.cache.js</file>
+<file>./</file>
+<file>showcase/compilation-mappings.txt</file>
+<file>showcase/showcase.nocache.js</file>
+<file>showcase/showcase.devmode.js</file>
+<file>showcase/clear.cache.gif</file>
+</files>
+</permutation>
